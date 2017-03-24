@@ -3,10 +3,6 @@ Public k As Integer
 Public tag As Integer
 Public Sub sjk()
 Select Case xh
-Case "test"
-xm = "TEST学校"
-Case "hostmain"
-xm = "后台管理员"
 Case 1
 xm = "浙江工业大学"
 If ag < 5 Then
