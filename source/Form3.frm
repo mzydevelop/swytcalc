@@ -4,10 +4,10 @@ Begin VB.Form Form3
    ClientHeight    =   7665
    ClientLeft      =   120
    ClientTop       =   465
-   ClientWidth     =   9645
+   ClientWidth     =   9120
    LinkTopic       =   "Form3"
    ScaleHeight     =   7665
-   ScaleWidth      =   9645
+   ScaleWidth      =   9120
    StartUpPosition =   3  '´°¿ÚÈ±Ê¡
    Begin VB.Label Label2 
       BackStyle       =   0  'Transparent
@@ -21,8 +21,9 @@ Begin VB.Form Form3
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
+      ForeColor       =   &H00FF0000&
       Height          =   7095
-      Left            =   3960
+      Left            =   4080
       TabIndex        =   1
       Top             =   240
       Width           =   4935
@@ -39,8 +40,9 @@ Begin VB.Form Form3
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
+      ForeColor       =   &H00FF0000&
       Height          =   5295
-      Left            =   240
+      Left            =   360
       TabIndex        =   0
       Top             =   240
       Width           =   3135

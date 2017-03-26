@@ -1,14 +1,14 @@
 VERSION 5.00
 Begin VB.Form Form1 
-   Caption         =   "2017浙江三位一体综合评价计算器 Made By MZY v1.00 Build0010"
+   Caption         =   "2017浙江三位一体综合评价计算器 Made By MZY v1.01 Build0014"
    ClientHeight    =   7935
    ClientLeft      =   120
    ClientTop       =   450
-   ClientWidth     =   12405
+   ClientWidth     =   12165
    Icon            =   "Form1.frx":0000
    LinkTopic       =   "Form1"
    ScaleHeight     =   7935
-   ScaleWidth      =   12405
+   ScaleWidth      =   12165
    StartUpPosition =   3  '窗口缺省
    Begin VB.CommandButton Command46 
       Caption         =   "对照表"
@@ -40,6 +40,7 @@ Begin VB.Form Form1
       EndProperty
       Height          =   615
       Left            =   9240
+      MaskColor       =   &H8000000F&
       TabIndex        =   77
       Top             =   840
       Width           =   2655
@@ -729,7 +730,7 @@ Begin VB.Form Form1
          Left            =   2040
          TabIndex        =   65
          Top             =   2880
-         Width           =   6735
+         Width           =   7095
       End
       Begin VB.CommandButton Command4 
          Caption         =   "A"
@@ -763,7 +764,7 @@ Begin VB.Form Form1
          Left            =   5880
          TabIndex        =   21
          Top             =   1920
-         Width           =   3255
+         Width           =   3135
       End
       Begin VB.Label Label7 
          BackStyle       =   0  'Transparent
@@ -1555,6 +1556,7 @@ Else
   Command37.Caption = "您的A有" + Str(ag) + "个，B有" + Str(bg) + "个，C有" + Str(cg) + "个,D有" + Str(dg) + "个。"
 
   xkbc = True
+  Call xkout
   MsgBox "学考信息保存成功！", vbOKOnly, "三位一体综合评价计算器"
   Command3.Enabled = False
 End If
@@ -1700,7 +1702,7 @@ cg = 0
 dg = 0
 eg = 0
 pc = 1 / 750
-
+git = "https://github.com/mzydevelop/swytcalc/"
 gly = False
 xkbc = False
 For a = 1 To 10

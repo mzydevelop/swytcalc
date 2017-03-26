@@ -45,6 +45,15 @@ Begin VB.Form Form2
    End
    Begin VB.Frame Frame3 
       Caption         =   "切换高校"
+      BeginProperty Font 
+         Name            =   "宋体"
+         Size            =   14.25
+         Charset         =   134
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   3495
       Left            =   10200
       TabIndex        =   19
@@ -78,7 +87,8 @@ Begin VB.Form Form2
             Strikethrough   =   0   'False
          EndProperty
          Height          =   975
-         Left            =   480
+         Left            =   360
+         MaskColor       =   &H80000010&
          TabIndex        =   21
          Top             =   1200
          Width           =   2895
@@ -103,11 +113,20 @@ Begin VB.Form Form2
    End
    Begin VB.Frame Frame2 
       Caption         =   "计算结果"
-      Height          =   2055
-      Left            =   480
+      BeginProperty Font 
+         Name            =   "宋体"
+         Size            =   14.25
+         Charset         =   134
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   2175
+      Left            =   240
       TabIndex        =   11
       Top             =   4680
-      Width           =   9375
+      Width           =   9615
       Begin VB.Label Label10 
          BackStyle       =   0  'Transparent
          Caption         =   "【分数】"
@@ -147,16 +166,25 @@ Begin VB.Form Form2
    End
    Begin VB.Timer Timer1 
       Interval        =   680
-      Left            =   8400
+      Left            =   8520
       Top             =   360
    End
    Begin VB.Frame Frame1 
       Caption         =   "高校信息"
+      BeginProperty Font 
+         Name            =   "宋体"
+         Size            =   14.25
+         Charset         =   134
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
       Height          =   3495
       Left            =   240
       TabIndex        =   1
       Top             =   1080
-      Width           =   9735
+      Width           =   9615
       Begin VB.CommandButton Command4 
          Caption         =   "查看报名时间"
          BeginProperty Font 
@@ -425,9 +453,6 @@ Begin VB.Form Form2
       Begin VB.Menu 授权信息 
          Caption         =   "授权信息"
       End
-      Begin VB.Menu 软件更新 
-         Caption         =   "软件更新"
-      End
       Begin VB.Menu 作者 
          Caption         =   "联系作者"
       End
@@ -437,6 +462,12 @@ Begin VB.Form Form2
       Begin VB.Menu 关于三位一体综合评价计算器 
          Caption         =   "关于三位一体综合评价计算器"
       End
+   End
+   Begin VB.Menu 软件更新 
+      Caption         =   "软件更新"
+   End
+   Begin VB.Menu 开源网址 
+      Caption         =   "开源网站"
    End
    Begin VB.Menu 帮助 
       Caption         =   "帮助"
@@ -539,6 +570,10 @@ newv = "http://mzy115.is-programmer.com/user_files/mzy115/File/soft/newjsq.rar"
 ShellExecute Me.hWnd, "open", newv, "", "", 1
 End Sub
 
+Private Sub Data1_Validate(Action As Integer, Save As Integer)
+
+End Sub
+
 Private Sub Form_Load()
 Timer1.Enabled = True
 
@@ -594,6 +629,11 @@ End Sub
 
 
 
+
+Private Sub 开源网址_Click()
+
+ShellExecute Me.hWnd, "open", git, "", "", 1
+End Sub
 
 Private Sub 软件更新_Click()
 MsgBox "请访问官网查看最新软件更新！当前版本为build" + softverb, vbInformation, "当前软件版本【" + softverb + "】"
