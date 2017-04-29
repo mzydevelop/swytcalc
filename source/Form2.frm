@@ -10,9 +10,10 @@ Begin VB.Form Form2
    ScaleHeight     =   7980
    ScaleWidth      =   14010
    Begin VB.CommandButton Command6 
+      BackColor       =   &H0000C0C0&
       Caption         =   "下载最新版本计算器"
       BeginProperty Font 
-         Name            =   "微软雅黑"
+         Name            =   "幼圆"
          Size            =   21.75
          Charset         =   134
          Weight          =   700
@@ -22,11 +23,13 @@ Begin VB.Form Form2
       EndProperty
       Height          =   1215
       Left            =   10320
+      Style           =   1  'Graphical
       TabIndex        =   24
       Top             =   6000
       Width           =   3495
    End
    Begin VB.CommandButton Command46 
+      BackColor       =   &H00FFFF80&
       Caption         =   "对照表"
       BeginProperty Font 
          Name            =   "宋体"
@@ -39,6 +42,7 @@ Begin VB.Form Form2
       EndProperty
       Height          =   615
       Left            =   10560
+      Style           =   1  'Graphical
       TabIndex        =   23
       Top             =   2640
       Width           =   3015
@@ -46,10 +50,10 @@ Begin VB.Form Form2
    Begin VB.Frame Frame3 
       Caption         =   "切换高校"
       BeginProperty Font 
-         Name            =   "宋体"
+         Name            =   "幼圆"
          Size            =   14.25
          Charset         =   134
-         Weight          =   400
+         Weight          =   700
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
@@ -76,6 +80,7 @@ Begin VB.Form Form2
          Width           =   1335
       End
       Begin VB.CommandButton Command5 
+         BackColor       =   &H0080FF80&
          Caption         =   "一键切换"
          BeginProperty Font 
             Name            =   "宋体"
@@ -89,6 +94,7 @@ Begin VB.Form Form2
          Height          =   975
          Left            =   360
          MaskColor       =   &H80000010&
+         Style           =   1  'Graphical
          TabIndex        =   21
          Top             =   1200
          Width           =   2895
@@ -99,7 +105,7 @@ Begin VB.Form Form2
             Name            =   "宋体"
             Size            =   14.25
             Charset         =   134
-            Weight          =   400
+            Weight          =   700
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
@@ -114,10 +120,10 @@ Begin VB.Form Form2
    Begin VB.Frame Frame2 
       Caption         =   "计算结果"
       BeginProperty Font 
-         Name            =   "宋体"
+         Name            =   "幼圆"
          Size            =   14.25
          Charset         =   134
-         Weight          =   400
+         Weight          =   700
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
@@ -132,7 +138,7 @@ Begin VB.Form Form2
          Caption         =   "【分数】"
          BeginProperty Font 
             Name            =   "隶书"
-            Size            =   36
+            Size            =   42
             Charset         =   134
             Weight          =   700
             Underline       =   0   'False
@@ -143,7 +149,7 @@ Begin VB.Form Form2
          Left            =   4200
          TabIndex        =   13
          Top             =   480
-         Width           =   4335
+         Width           =   4575
       End
       Begin VB.Label Label9 
          BackStyle       =   0  'Transparent
@@ -172,10 +178,10 @@ Begin VB.Form Form2
    Begin VB.Frame Frame1 
       Caption         =   "高校信息"
       BeginProperty Font 
-         Name            =   "宋体"
+         Name            =   "幼圆"
          Size            =   14.25
          Charset         =   134
-         Weight          =   400
+         Weight          =   700
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
@@ -186,7 +192,8 @@ Begin VB.Form Form2
       Top             =   1080
       Width           =   9615
       Begin VB.CommandButton Command4 
-         Caption         =   "查看报名时间"
+         BackColor       =   &H0000FF00&
+         Caption         =   "报名时间"
          BeginProperty Font 
             Name            =   "宋体"
             Size            =   18
@@ -198,11 +205,13 @@ Begin VB.Form Form2
          EndProperty
          Height          =   615
          Left            =   4920
+         Style           =   1  'Graphical
          TabIndex        =   18
          Top             =   2760
-         Width           =   2415
+         Width           =   1695
       End
       Begin VB.CommandButton Command3 
+         BackColor       =   &H000080FF&
          Caption         =   "进入报名系统"
          BeginProperty Font 
             Name            =   "宋体"
@@ -215,11 +224,13 @@ Begin VB.Form Form2
          EndProperty
          Height          =   615
          Left            =   2400
+         Style           =   1  'Graphical
          TabIndex        =   17
          Top             =   2760
          Width           =   2415
       End
       Begin VB.CommandButton Command2 
+         BackColor       =   &H000000FF&
          Caption         =   "查看招生章程"
          BeginProperty Font 
             Name            =   "宋体"
@@ -232,11 +243,13 @@ Begin VB.Form Form2
          EndProperty
          Height          =   615
          Left            =   120
+         Style           =   1  'Graphical
          TabIndex        =   16
          Top             =   2760
          Width           =   2175
       End
       Begin VB.CommandButton Command1 
+         BackColor       =   &H0000FFFF&
          Caption         =   "计算综合分"
          BeginProperty Font 
             Name            =   "宋体"
@@ -249,6 +262,7 @@ Begin VB.Form Form2
          EndProperty
          Height          =   1215
          Left            =   5880
+         Style           =   1  'Graphical
          TabIndex        =   15
          Top             =   1320
          Width           =   3135
@@ -434,7 +448,7 @@ Begin VB.Form Form2
       BackStyle       =   0  'Transparent
       Caption         =   "欢迎您使用三位一体综合评价计算器！"
       BeginProperty Font 
-         Name            =   "宋体"
+         Name            =   "幼圆"
          Size            =   21.75
          Charset         =   134
          Weight          =   700
@@ -469,11 +483,11 @@ Begin VB.Form Form2
    Begin VB.Menu 开源网址 
       Caption         =   "开源网站"
    End
-   Begin VB.Menu 帮助 
-      Caption         =   "帮助"
-   End
    Begin VB.Menu 注销 
       Caption         =   "注销"
+   End
+   Begin VB.Menu downnew 
+      Caption         =   "下载最新版本计算器"
    End
 End
 Attribute VB_Name = "Form2"
@@ -574,6 +588,11 @@ Private Sub Data1_Validate(Action As Integer, Save As Integer)
 
 End Sub
 
+Private Sub downnew_Click()
+newv = "http://mzy115.is-programmer.com/user_files/mzy115/File/soft/newjsq.rar"
+ShellExecute Me.hWnd, "open", newv, "", "", 1
+End Sub
+
 Private Sub Form_Load()
 Timer1.Enabled = True
 
@@ -594,6 +613,10 @@ End Sub
 
 
 
+Private Sub Label11_Click()
+MsgBox "您好，如有技术问题咨询或bug反馈请联系QQ1172637796", vbInformation, "温馨提示"
+End Sub
+
 Private Sub online_Click()
 gw = "http://mzy115.is-programmer.com/2017/2/18/swyt2017.208634.html"
 ShellExecute Me.hWnd, "open", gw, "", "", 1
@@ -609,6 +632,7 @@ Timer1.Enabled = False
 Else
 End If
 End Sub
+
 
 
 

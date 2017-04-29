@@ -12,6 +12,7 @@ Begin VB.Form frmAbout
    ScaleMode       =   0  'User
    ScaleWidth      =   8057.063
    Begin VB.CommandButton Command1 
+      BackColor       =   &H000000FF&
       Caption         =   "点击访问GitHub项目"
       BeginProperty Font 
          Name            =   "宋体"
@@ -24,6 +25,7 @@ Begin VB.Form frmAbout
       EndProperty
       Height          =   1095
       Left            =   5280
+      Style           =   1  'Graphical
       TabIndex        =   6
       Top             =   240
       Width           =   2295
