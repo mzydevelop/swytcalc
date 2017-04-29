@@ -1,14 +1,14 @@
 VERSION 5.00
 Begin VB.Form frmAbout 
    Caption         =   "关于三位一体综合评价计算器"
-   ClientHeight    =   4215
+   ClientHeight    =   4785
    ClientLeft      =   2415
    ClientTop       =   2010
    ClientWidth     =   8580
    ClipControls    =   0   'False
    Icon            =   "frmAbout.frx":0000
    LinkTopic       =   "Form2"
-   ScaleHeight     =   2909.268
+   ScaleHeight     =   3302.692
    ScaleMode       =   0  'User
    ScaleWidth      =   8057.063
    Begin VB.CommandButton Command1 
@@ -23,9 +23,9 @@ Begin VB.Form frmAbout
          Strikethrough   =   0   'False
       EndProperty
       Height          =   1095
-      Left            =   5040
+      Left            =   5280
       TabIndex        =   6
-      Top             =   360
+      Top             =   240
       Width           =   2295
    End
    Begin VB.Timer Timer1 
@@ -57,11 +57,11 @@ Begin VB.Form frmAbout
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   975
+      Height          =   375
       Left            =   240
       TabIndex        =   5
-      Top             =   1800
-      Width           =   7815
+      Top             =   2880
+      Width           =   3495
    End
    Begin VB.Label lblDescription 
       BackStyle       =   0  'Transparent
@@ -76,11 +76,11 @@ Begin VB.Form frmAbout
          Strikethrough   =   0   'False
       EndProperty
       ForeColor       =   &H00000000&
-      Height          =   690
-      Left            =   1080
+      Height          =   1050
+      Left            =   240
       TabIndex        =   1
-      Top             =   1200
-      Width           =   3885
+      Top             =   1560
+      Width           =   7845
    End
    Begin VB.Label lblTitle 
       BackStyle       =   0  'Transparent
@@ -136,7 +136,7 @@ Begin VB.Form frmAbout
       Height          =   900
       Left            =   120
       TabIndex        =   2
-      Top             =   3120
+      Top             =   3600
       Width           =   8295
    End
 End
