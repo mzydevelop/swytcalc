@@ -1,6 +1,6 @@
 # swytcalc
 喜闻乐见的事情来了，三位一体综合评价计算器开源了！本计算器开源协议为GPL（GNU GENERAL PUBLIC LICENSE）。
-最新版本的Build为0018（2017429更新）！v1.02
+最新版本的Build为0018（20170429更新）！v1.02
 开发源码为Visual Basic 6
 
 版本改进：
