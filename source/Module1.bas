@@ -40,7 +40,51 @@ Public btime As String
 Public cs As String
 Public newv As String
 Public git As String
+Public savekey As String
+Public dq As Boolean
+Public Sub loadxk()
+savekey = GetIniS("xk", "savekey", "")
+If savekey = "" Then
+dq = False
+MsgBox "您未保存过参数", vbInformation, "配置读取信息"
+Else
+dq = True
+xkb(1) = GetIniS("xk", "语文", "")
+xkb(2) = GetIniS("xk", "数学", "")
+xkb(3) = GetIniS("xk", "英语", "")
+xkb(4) = GetIniS("xk", "政治", "")
+xkb(5) = GetIniS("xk", "历史", "")
+xkb(6) = GetIniS("xk", "地理", "")
+xkb(7) = GetIniS("xk", "物理", "")
+xkb(8) = GetIniS("xk", "化学", "")
+xkb(9) = GetIniS("xk", "生物", "")
+xkb(10) = GetIniS("xk", "技术", "")
+MsgBox "语文：" + xkb(1) + "    数学：" + xkb(2) + "    英语：" + xkb(3) + "    政治：" + xkb(4) + "    历史：" + xkb(5) + "    地理：" + xkb(6) + "    物理：" + xkb(7) + "    化学：" + xkb(8) + "  生物：" + xkb(9) + "    技术：" + xkb(10), vbQuestion, "学考信息读取结果"
 
+Dim p As Integer
+
+
+  For p = 1 To 10
+  If xkb(p) = "A" Then
+  ag = ag + 1
+  Else
+    If xkb(p) = "B" Then
+    bg = bg + 1
+    Else
+      If xkb(p) = "C" Then
+      cg = cg + 1
+      Else
+        If xkb(p) = "D" Then
+        dg = dg + 1
+        End If
+      End If
+    End If
+  End If
+  Next p
+  eg = 10 - (ag + bg + cg + dg)
+
+End If
+End Sub
 
 
 Public Sub loaddata()
@@ -51,10 +95,10 @@ Public Sub loaddata()
 'softabout = GetIniS("softinfo", "软件描述", "")
 If softverm = "" Then
 softverm = "1.0"
-softverv = "1"
-softverb = "0014"
+softverv = "2"
+softverb = "0018"
 snumber = "序列号暂不提供（全部授权）"
-softabout = "增加了保存学考信息到配置文件功能，目前测试中。，版本更新到Build0014。"
+softabout = "增加了从配置文件读取学考信息功能，修复多处BUG，目前测试中。，版本更新到Build0018。"
 End If
 
 End Sub
@@ -67,6 +111,7 @@ SetIniS "softinfo", "软件描述", softabout
 End Sub
 
 Public Sub xkout()
+savekey = Str(Date) + Str(Time) + "@" + Str(softverm) + Str(softverv) + Str(softverb)
 SetIniS "xk", "语文", xkb(1)    '获取设置的参数
 SetIniS "xk", "数学", xkb(2)
 SetIniS "xk", "英语", xkb(3)
@@ -77,4 +122,5 @@ SetIniS "xk", "物理", xkb(7)
 SetIniS "xk", "化学", xkb(8)
 SetIniS "xk", "生物", xkb(9)    '获取设置的参数
 SetIniS "xk", "技术", xkb(10)
+SetIniS "xk", "savekey", savekey
 End Sub
