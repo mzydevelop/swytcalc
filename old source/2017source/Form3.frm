@@ -4,33 +4,14 @@ Begin VB.Form Form3
    ClientHeight    =   7665
    ClientLeft      =   120
    ClientTop       =   465
-   ClientWidth     =   13605
+   ClientWidth     =   9120
    LinkTopic       =   "Form3"
    ScaleHeight     =   7665
-   ScaleWidth      =   13605
+   ScaleWidth      =   9120
    StartUpPosition =   3  '窗口缺省
-   Begin VB.Label Label3 
-      BackStyle       =   0  'Transparent
-      Caption         =   $"Form3.frx":0000
-      BeginProperty Font 
-         Name            =   "宋体"
-         Size            =   14.25
-         Charset         =   134
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      ForeColor       =   &H00FF0000&
-      Height          =   3255
-      Left            =   7680
-      TabIndex        =   2
-      Top             =   240
-      Width           =   4695
-   End
    Begin VB.Label Label2 
       BackStyle       =   0  'Transparent
-      Caption         =   $"Form3.frx":00B1
+      Caption         =   $"Form3.frx":0000
       BeginProperty Font 
          Name            =   "宋体"
          Size            =   14.25
@@ -49,7 +30,7 @@ Begin VB.Form Form3
    End
    Begin VB.Label Label1 
       BackStyle       =   0  'Transparent
-      Caption         =   $"Form3.frx":02C5
+      Caption         =   $"Form3.frx":0214
       BeginProperty Font 
          Name            =   "宋体"
          Size            =   15.75

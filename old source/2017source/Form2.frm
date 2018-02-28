@@ -11,7 +11,7 @@ Begin VB.Form Form2
    ScaleWidth      =   14010
    Begin VB.CommandButton Command6 
       BackColor       =   &H0000C0C0&
-      Caption         =   "下载最新版本"
+      Caption         =   "下载最新版本计算器"
       BeginProperty Font 
          Name            =   "幼圆"
          Size            =   21.75
@@ -483,14 +483,11 @@ Begin VB.Form Form2
    Begin VB.Menu 开源网址 
       Caption         =   "开源网站"
    End
-   Begin VB.Menu downnew 
-      Caption         =   "下载最新版本"
-   End
-   Begin VB.Menu help 
-      Caption         =   "帮助"
-   End
    Begin VB.Menu 注销 
       Caption         =   "注销"
+   End
+   Begin VB.Menu downnew 
+      Caption         =   "下载最新版本计算器"
    End
 End
 Attribute VB_Name = "Form2"
@@ -516,10 +513,11 @@ Case 6
      swyts = swyts / 10000
    End If
 Case 14
-    If zhf > 225 Or gkcj > 1 / pc Then
+    If zhf > 120 Or gkcj > 1 / pc Then
         MsgBox "综合素质成绩或高考成绩有误", vbCritical, "系统消息"
     Else
-        swyts = xkf + zhf + gkcj * examb
+        zhf = zhf / 1.2
+        swyts = xkf * xb + zhf * zb + gkcj * pc * examb * 100
         swyts = Int(10000 * swyts)
         swyts = swyts / 10000
     End If
@@ -531,26 +529,14 @@ Case 20
      swyts = Int(10000 * swyts)
      swyts = swyts / 10000
    End If
-Case 24
-    If zhf > 120 Or gkcj > 1 / pc Then
+Case 26
+   If zhf > 100 Or gkcj > 1 / pc Then
         MsgBox "综合素质成绩或高考成绩有误", vbCritical, "系统消息"
-    Else
-        If zhf > 100 Then
-        zhf = 100
-        End If
-        swyts = xkf * xb + zhf * zb + gkcj * pc * examb * 100
-        swyts = Int(10000 * swyts)
-        swyts = swyts / 10000
-    End If
-Case 32
-    If zhf > 110 Or gkcj > 1 / pc Then
-        MsgBox "综合素质成绩或高考成绩有误", vbCritical, "系统消息"
-    Else
-        zhf = zhf / 1.1
-        swyts = xkf * xb + zhf * zb + gkcj * pc * examb * 100
-        swyts = Int(10000 * swyts)
-        swyts = swyts / 10000
-    End If
+   Else
+     swyts = xkf * xb + zhf * 7.5 * zb + gkcj * examb
+     swyts = Int(10000 * swyts)
+     swyts = swyts / 10000
+   End If
 Case Else
  
    If zhf > 100 Or gkcj > 1 / pc Then
@@ -627,10 +613,6 @@ End Sub
 
 
 
-Private Sub help_Click()
-MsgBox "功能开发中。"
-End Sub
-
 Private Sub Label11_Click()
 MsgBox "您好，如有技术问题咨询或bug反馈请联系QQ1172637796", vbInformation, "温馨提示"
 End Sub
@@ -682,7 +664,7 @@ MsgBox "请访问官网查看最新软件更新！当前版本为build" + softverb, vbInformation, 
 End Sub
 
 Private Sub 授权信息_Click()
-MsgBox "本软件已授权给浙江省2018三位一体所有相关人员！", vbInformation, "授权信息"
+MsgBox "本软件已授权给浙江省2017三位一体所有相关人员！", vbInformation, "授权信息"
 End Sub
 
 

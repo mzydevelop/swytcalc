@@ -95,10 +95,10 @@ Public Sub loaddata()
 'softabout = GetIniS("softinfo", "软件描述", "")
 If softverm = "" Then
 softverm = "1.0"
-softverv = "5"
-softverb = "0022"
-snumber = "（向2018年三位一体全体人员全部授权）"
-softabout = "2018年新春版本更新，版本更新到Build0020。"
+softverv = "2"
+softverb = "0018"
+snumber = "序列号暂不提供（全部授权）"
+softabout = "增加了从配置文件读取学考信息功能，修复多处BUG，目前测试中。，版本更新到Build0018。"
 End If
 
 End Sub

@@ -1,6 +1,6 @@
 VERSION 5.00
 Begin VB.Form Form1 
-   Caption         =   "2018浙江三位一体综合评价计算器 Made By MZY v1.05 Build0022"
+   Caption         =   "2017浙江三位一体综合评价计算器 Made By MZY v1.02 Build0018"
    ClientHeight    =   7935
    ClientLeft      =   120
    ClientTop       =   450
@@ -767,7 +767,6 @@ Begin VB.Form Form1
          Width           =   7335
       End
       Begin VB.CommandButton Command4 
-         BackColor       =   &H00000000&
          Caption         =   "A"
          BeginProperty Font 
             Name            =   "宋体"
@@ -1347,7 +1346,7 @@ Begin VB.Form Form1
    End
    Begin VB.Label Label4 
       BackStyle       =   0  'Transparent
-      Caption         =   "输入（1-46，学校序号参见对照表。）"
+      Caption         =   "输入（1-39，学校序号参见对照表。）"
       BeginProperty Font 
          Name            =   "宋体"
          Size            =   12
@@ -1365,7 +1364,7 @@ Begin VB.Form Form1
    End
    Begin VB.Label Label3 
       BackStyle       =   0  'Transparent
-      Caption         =   "Made By MZY Develop 20180226"
+      Caption         =   "Made By MZY Develop 20170429"
       BeginProperty Font 
          Name            =   "幼圆"
          Size            =   14.25
@@ -1502,7 +1501,7 @@ Label6.Caption = "正在载入" + xm + "参数"
 Timer1.Enabled = True
 Else
 Text1.Text = ""
-MsgBox "请先输入学校序号查询学校参数后再登陆，序号为（1-46）！", vbInformation, "系统消息"
+MsgBox "请先输入学校序号查询学校参数后再登陆，序号为（1-39）！", vbInformation, "系统消息"
 End If
 End Sub
 
