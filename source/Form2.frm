@@ -594,7 +594,7 @@ End If
 End Sub
 
 Private Sub Command6_Click()
-newv = "http://mzy115.is-programmer.com/user_files/mzy115/File/soft/newjsq.rar"
+newv = "https://github.com/mzydevelop/swytcalc/raw/master/release/2018%E4%B8%89%E4%BD%8D%E4%B8%80%E4%BD%93%E7%BB%BC%E5%90%88%E8%AF%84%E4%BB%B7%E8%AE%A1%E7%AE%97%E5%99%A8.exe"
 ShellExecute Me.hWnd, "open", newv, "", "", 1
 End Sub
 
@@ -603,7 +603,7 @@ Private Sub Data1_Validate(Action As Integer, Save As Integer)
 End Sub
 
 Private Sub downnew_Click()
-newv = "http://mzy115.is-programmer.com/user_files/mzy115/File/soft/newjsq.rar"
+newv = "https://github.com/mzydevelop/swytcalc/raw/master/release/2018%E4%B8%89%E4%BD%8D%E4%B8%80%E4%BD%93%E7%BB%BC%E5%90%88%E8%AF%84%E4%BB%B7%E8%AE%A1%E7%AE%97%E5%99%A8.exe"
 ShellExecute Me.hWnd, "open", newv, "", "", 1
 End Sub
 
